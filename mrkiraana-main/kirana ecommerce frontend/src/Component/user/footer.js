@@ -61,7 +61,7 @@ const Footer = () => {
             160, Prem Nagar, Ghaziabad, Ghaziabad, 
             Uttar Pradesh, 201001
             </p>
-          <div className="footer-contact">
+          <div className="footer-contact ">
             <div className="phone">Phone No: +919891103211</div>
             <div className="email">Iamnishantraheja@gmail.com</div>
           </div>
