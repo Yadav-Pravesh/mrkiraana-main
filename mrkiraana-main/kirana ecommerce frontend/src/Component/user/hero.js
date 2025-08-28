@@ -5,31 +5,32 @@ import { EffectFade } from "swiper";
 
 // ⚠ Replace with correct paths to your image assets
 import slider_img_1 from "../user/images/slider-1.png";
-import slider_img_2 from "../user/images/slider-2.png";
 import slider_img_3 from "../user/images/slider-3.png";
+import kirana_img from "../user/images/new-img2.png"; 
 
 // Use a Unicode icon or external SVG here
-import { FaArrowRight } from "react-icons/fa"; // Optional: You can use this as a RightArrow replacement
+import { FaArrowRight } from "react-icons/fa"; 
 
 // import styles (important for swiper)
 import "swiper/css";
 import "swiper/css/effect-fade";
-import '../user/css/hero.css'
+import "../user/css/hero.css";
 
 const slider_data = [
   {
     id: 1,
     pre_title: (
       <>
-       Authentic Indian Groceries Delivered Fresh  <br /> Traditional Flavors &Premium Qualityat Your Fingertips
+        Authentic Indian Groceries Delivered Fresh <br /> Traditional Flavors &
+        Premium Quality at Your Fingertips
       </>
     ),
     title: (
       <>
-        Your Trusted Kirana StoreNow Online! <br />
+        Your Trusted Kirana Store Now Online! <br />
       </>
     ),
-    img: "https://static.vecteezy.com/system/resources/previews/045/913/392/non_2x/full-shopping-cart-with-groceries-cut-out-stock-png.png",
+    img: kirana_img, 
   },
   {
     id: 2,
@@ -63,6 +64,7 @@ const slider_data = [
 
 const HeroBanner = () => {
   const [loop, setLoop] = useState(false);
+
   useEffect(() => {
     setLoop(true);
   }, []);
@@ -82,7 +84,7 @@ const HeroBanner = () => {
             key={item.id}
             className="slider__item-13 slider__height-13 grey-bg-17 d-flex align-items-end"
           >
-            <div className="container" >
+            <div className="container">
               <div className="row align-self-end">
                 <div className="col-xl-6 col-lg-6">
                   <div className="slider__content-13">
@@ -99,11 +101,14 @@ const HeroBanner = () => {
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6">
-                  <div className="slider__thumb-13 text-end mr-40" >
+                  <div className="slider__thumb-13 text-end mr-40">
                     <span className="slider__thumb-13-circle-1"></span>
                     <span className="slider__thumb-13-circle-2"></span>
-                    <img src={item.img} alt={`Banner ${item.id}`} className="img-fluid" />
-                      {/* <img src="https://static.vecteezy.com/system/resources/previews/045/913/392/non_2x/full-shopping-cart-with-groceries-cut-out-stock-png.png" alt={`Banner ${item.id}`} className="img-fluid" /> */}
+                    <img
+                      src={item.img}
+                      alt={`Banner ${item.id}`}
+                      className="img-fluid"
+                    />
                   </div>
                 </div>
               </div>
