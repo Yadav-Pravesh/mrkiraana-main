@@ -1,17 +1,16 @@
 .tabs {
-  margin: 0px auto 0 auto;
+  margin: 0 auto;
   max-width: 1200px;
   display: flex;
   gap: 1rem;
   border-bottom: 2px solid #ccc;
   margin-bottom: 1rem;
   flex-wrap: wrap;
-  justify-content: flex-start; /* keep original */
+  justify-content: flex-start;
 }
 
 .tab {
-  margin: 48px 0 0 0;
-  max-width: 1200px;
+  margin-top: 24px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 4px 4px 0 0;
@@ -28,18 +27,15 @@
 }
 
 .products-grid {
-  margin: 48px auto 0 auto;
+  margin: 24px auto 0 auto;
   max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  justify-content: flex-start;
 }
 
 .product-card {
   position: relative;
-  flex: 1 1 220px;
-  max-width: 220px;
   background: #f8f8f8;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -106,29 +102,16 @@
 
 @media (max-width: 768px) {
   .tabs {
-    flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
-    margin-top: 24px;
   }
 
   .tab {
-    max-width: 45%;
-    margin: 8px 0;
+    flex: 1 1 45%;
+    margin: 5px 0;
     font-size: 0.9rem;
-    padding: 0.5rem;
-    white-space: normal;
     text-align: center;
-  }
-
-  .products-grid {
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .product-card {
-    max-width: 100%;
-    flex: 1 1 100%;
+    white-space: normal;
   }
 
   .add-to-cart-btn {
@@ -143,20 +126,19 @@
 
 @media (max-width: 480px) {
   .tab {
-    max-width: 90%;
+    flex: 1 1 100%;
     font-size: 0.85rem;
   }
 
   .product-name {
     font-size: 1rem;
   }
+
   .product-price {
     font-size: 0.9rem;
   }
-  .view-all-btn
-  {
-    position: absolute;
-    margin-top:-80px !important;
-    margin-left: -50px;
+
+  .products-grid {
+    gap: 1rem;
   }
 }
